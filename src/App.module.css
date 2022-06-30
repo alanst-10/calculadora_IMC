@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main {
+    padding-bottom: 50px;
+}
+
+.headerContainer {
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+.container {
+    max-width: 900px;
+    display: flex;
+    margin: auto;
+}
+
+.container .left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+}
+.left h1 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.container .left h1 {
+    margin: 0;
+    font-size: 40px;
+    color: #3a4b5c
+}
+
+.container .left p {
+    font-size: 16px;
+    margin-bottom: 40px;
+    color: #6a7d8b;
+}
+
+.container .left input {
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid rgba(150, 163, 171, .5);
+    padding: 10px 2px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    outline: 0;
+}
+
+.container .left button {
+    background-color: #227c9d;
+    color: #fff;
+    font-size: 15px;
+    border: 0;
+    border-radius: 10px;
+    padding: 15px 0;
+    width: 100%;
+    margin-top: 40px;
+    transition: all ease .5s;
+}
+
+.container .left button:hover {
+    opacity: 0.8;
+}
+
+.container .left input:disabled {
+    font-weight: bold;
+}
+
+.container .left button:disabled {
+    opacity: 0.4;
+    cursor: auto;
+}
+
+
+.container .right {
+    flex: 1;
+    margin-left: 40px;
+    display: flex;
+}
+
+.container .right .grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.container .right .rightBig {
+    flex: 1;
+    display: flex;
+}
+
+.container .right .rightarrow {
+    position: absolute;
+    background-color: #227c9d;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: -35px;
+    margin-top: 165px;
+    transition: all ease .2s;
+}
+
+.container .right .rightarrow:hover {
+    opacity: 0.9;
+}
+
+@media (max-width: 770px) {
+    header {
+        padding: 0 20px;
+    }
+    .container {
+        padding: 0 20px;
+        flex-direction: column;
+    }
+    .container .left {
+        margin-right: 0;
+    }
+    .container .right {
+        margin-left: 0;
+        margin-top: 50px;
+    }
+    .container .right .rightarrow {
+        margin-left: 0;
+        margin-top: 0;
+        border-radius: 10px;
+    }
+}
+@media (max-width: 430px) {
+    .container .right .grid {
+        grid-template-columns: 1fr;
+    }
+}
